@@ -76,7 +76,9 @@ npm run dev      # local server
 npm test         # unit tests
 npm run check    # type check
 npm run build    # production build in dist/
+python3 tests/e2e/companion.py /tmp/shots   # browser test (tests/e2e/README.md)
 ```
 
 Tests run against `tests/sample-vault`, a small vault written by hand for
-testing. Its pages are invented.
+testing. Its pages are invented. `CLAUDE.md` holds the working rules, and
+`docs/status.md` what is waiting.
