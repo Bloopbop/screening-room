@@ -71,7 +71,7 @@
       </p>
     {:else}
       <div class="actions">
-        <button class="btn primary" onclick={() => app.act('watch', ref(entry))}>Watch</button>
+        <button class="btn primary" onclick={() => app.act('watch', ref(entry))}>Read</button>
         {#if entry.status !== 'hold'}<button class="btn" onclick={() => app.act('hold', ref(entry))}>Hold</button>{/if}
         <button class="btn quiet" onclick={() => (app.ask = { action: 'pass', ref: ref(entry) })}>Pass</button>
       </div>
@@ -83,7 +83,7 @@
 {#if !entries.length}
   <p class="empty">The feed is empty. Ask the curator to scout.</p>
 {:else}
-  <p class="small muted">Watch adds a book to your list, Hold keeps it for the next screening, Pass drops it for good.</p>
+  <p class="small muted">Read adds a book to your list, Hold keeps it for the next screening, Pass drops it for good.</p>
   {#each pending as entry, i (entry.slug + i)}{@render candidate(entry)}{/each}
   {#if held.length}
     <div class="section"><h2>Held</h2></div>

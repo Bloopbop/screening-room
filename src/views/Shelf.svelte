@@ -66,7 +66,7 @@
       {/if}
     </BookRow>
   {:else}
-    <p class="empty">Nothing on the list. Watch something in the feed, or scan a book.</p>
+    <p class="empty">Nothing on the list. Add something from the feed, or scan a book.</p>
   {/each}
 {:else if tab === 'read'}
   {#each read.filter((b) => matches(b.title, b.author)) as book (book.path)}
