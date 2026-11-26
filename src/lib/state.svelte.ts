@@ -183,7 +183,7 @@ class AppState {
 }
 
 const CONFIRM: Record<Action, string> = {
-  watch: 'Watching',
+  watch: 'Added',
   pass: 'Passed on',
   hold: 'Holding',
   start: 'Started',

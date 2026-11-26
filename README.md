@@ -6,7 +6,7 @@ in progress, the to-read list, the shelf, the books on hand, the latest feed
 from the scout) and lets the reader act on it away from the desk.
 
 The app has no recommender of its own and never edits the wiki. Every action
-(watch, pass or hold a candidate; start, note, finish or stop a book; want a
+(read, pass or hold a candidate; start, note, finish or stop a book; want a
 book, or log one read before) is written to the vault's `inbox/` as a short
 note. The curator files the notes at the start of the next session, using the
 vault's `screening-room-inbox` skill, and deletes them. Until then the app

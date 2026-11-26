@@ -4,7 +4,7 @@ import { ACTIONS, type Action, type AppNote } from './types';
 
 /** What each action means, for buttons and waiting lists. */
 export const ACTION_LABELS: Record<Action, string> = {
-  watch: 'Watch',
+  watch: 'Read',
   pass: 'Pass',
   hold: 'Hold',
   start: 'Started',

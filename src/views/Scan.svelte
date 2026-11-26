@@ -204,7 +204,7 @@
           <button class="btn" onclick={() => (app.ask = { action: 'add', ref: target(undefined) })}>Want it after all</button>
           <span class="small muted">The curator will check with you.</span>
         {:else if feed}
-          <button class="btn primary" onclick={() => app.act('watch', target(feed))}>Watch</button>
+          <button class="btn primary" onclick={() => app.act('watch', target(feed))}>Read</button>
           <button class="btn quiet" onclick={() => (app.ask = { action: 'pass', ref: target(feed) })}>Pass</button>
         {:else}
           <button class="btn primary" onclick={() => (app.ask = { action: 'add', ref: target(onHand) })}>Want to read</button>
