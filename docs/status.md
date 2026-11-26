@@ -10,16 +10,18 @@ check passed again with the new one. The first real barcode scan did not work
 
 ## Waiting
 
-- **The vault token** is a fine-grained GitHub token with an expiry date. Renew
-  it before then: regenerate it on GitHub (Settings → Developer settings →
-  Fine-grained tokens), paste the new one into the app at Settings → Change
-  vault or token, and run the check.
+Nothing. When the vault token nears its expiry date, renew it: regenerate it on
+GitHub (Settings → Developer settings → Fine-grained tokens), paste the new one
+into the app at Settings → Change vault or token, and run the check.
 
 ## Next
 
 Nothing is planned yet. One known problem, not urgent: **barcode scanning on
-the S24**. On the first real scan the camera opened, but nothing was read into
-the barcode field. (A successful scan looks the book up and shows its card; it
+the S24**. On the first real scan the camera opened, with its frame and the hint
+to hold the barcode inside it, but nothing was read: no book card and no message
+appeared. The scanner gives no feedback when it finds nothing. It keeps looking
+and ignores errors on individual frames, so a detector that fails on every frame
+would look the same. (A successful scan looks the book up and shows its card; it
 doesn't fill the ISBN field.) The device check only confirms that the browser
 supports barcode reading, and the browser test uses a scripted reader, so
 neither would catch this.
