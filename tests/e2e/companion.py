@@ -285,7 +285,9 @@ try:
         north = page.locator("[data-testid=on-hand]").filter(has_text="North and South")
         check("an on-hand book already on the list says so", "On your list" in north.inner_text())
         page.click(".tabs a[href$='/passed']")
-        check("Passed lists dismissed.csv", page.locator(".passed").count() == 3)
+        page.wait_for_selector(".tabs a[href$='/passed'][aria-current='page']")  # the tab switches on hashchange, after the click returns
+        passed = page.locator(".passed").count()
+        check("Passed lists dismissed.csv", passed == 3, f"{passed} rows")
 
         # --- Finish the book in progress -----------------------------------
         page.click("nav >> text=Desk")
